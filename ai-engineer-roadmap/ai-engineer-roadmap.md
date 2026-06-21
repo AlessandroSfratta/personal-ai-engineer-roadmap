@@ -4,7 +4,26 @@
 >
 > Questa versione è pensata per LinkedIn e portfolio: mostra direzione, metodo, competenze e deliverable senza includere note operative personali.
 
-Ultimo aggiornamento: 28/05/2026
+## 🎯 Principio guida — AI Engineering production-first
+
+Questa roadmap non punta a formare un semplice utilizzatore di framework AI, ma una figura capace di progettare, misurare, debuggare, deployare e mantenere sistemi AI reali.
+
+Un AI Engineer professionale sa quando una baseline semplice basta, quando serve un vector database, quando usare un modello più piccolo, quando introdurre caching, routing, valutazione, tracing e failure analysis. AI Engineering è soprattutto software engineering con AI dentro: il modello è un componente del sistema, non tutta l'applicazione.
+
+### Definition of Done trasversale per ogni progetto AI
+
+- esiste una baseline semplice prima della soluzione complessa
+- sono documentati i trade-off tecnici
+- ci sono metriche di qualità
+- ci sono test minimi o smoke test
+- ci sono log strutturati
+- sono gestiti errori, timeout e retry
+- è presente un README orientato a produzione
+- sono tracciabili failure case e limiti del sistema
+- non si introduce un framework solo per moda
+- ogni scelta tecnica risponde alla domanda: "serve davvero?"
+
+Ultimo aggiornamento: 21/06/2026
 
 ## Come leggere la roadmap
 
@@ -21,6 +40,8 @@ Legenda badge:
 - 🟨 **CERT**: competenze mappate alla checklist AI Engineering
 - 🔎 **RESEARCH**: studio autonomo da documentazione, paper, articoli o tutorial tecnici
 - 🆕 **SKILLS**: competenze professionali aggiunte alla roadmap
+- 🎓 **GH600**: risorsa per la certificazione GitHub Certified: Agentic AI Developer (esame GH-600), Step 25-28
+- 🛠️ **BASWE**: progetto portfolio di riferimento dalla guida (italiana, da usare come riferimento) [`15-ai-engineering-projects-guide.it.md`](./15-ai-engineering-projects-guide.it.md) ("15 AI Engineering Projects That Actually Land Jobs") — originale inglese in [`15-ai-engineering-projects-guide.md`](./15-ai-engineering-projects-guide.md). Non è uno step da completare: è un blueprint collegato allo step. Mappa completa progetti→step in cima alla guida.
 
 ## Obiettivo
 
@@ -43,6 +64,7 @@ Il percorso non è solo teorico. Ogni fase deve produrre almeno uno tra:
 | ⏳ | Testing e manutenibilità | Step 4 |
 | 🕒 | Reliability, ML, LLM, RAG, Agentic AI, LLMOps | Step 5-23 |
 | 🕒 | Portfolio UI opzionale | Step 24 |
+| 🕒 | Certificazione GitHub Agentic AI Developer (GH-600) | Step 25-28 |
 
 ## Percorsi Master Integrati
 
@@ -185,6 +207,8 @@ Regole:
 - logging
 - refactor
 - CI/CD iniziale
+- test sulle parti non-AI: parsing, validazione input, contratti API e gestione errori
+- base riusabile per test, logging, config e smoke test
 
 **Badge**
 
@@ -193,7 +217,7 @@ Regole:
 - 🟨 CERT: CERT-SWE - Testing, coverage, CI/CD
 - 🔎 RESEARCH: GitHub Actions e cache pytest
 
-**Output:** pipeline CI verde con coverage minimo e test riproducibili.
+**Output:** pipeline CI verde con coverage minimo, test riproducibili e base riusabile per i progetti successivi.
 
 **Mini-progetti / esercizi**
 
@@ -212,6 +236,8 @@ Regole:
 - Timeouts
 - Logging strutturato
 - Tassonomia degli errori
+- Failure case tracciabili
+- Regola operativa: prima debuggo il sistema, poi il prompt
 
 **Badge**
 
@@ -220,7 +246,7 @@ Regole:
 - 🟨 CERT: consolidamento software engineering
 - 🔎 RESEARCH: timeouts, retries e fail-safe design
 
-**Output:** libreria con logging strutturato e comportamento fail-safe.
+**Output:** libreria con logging strutturato, retry/backoff, timeout, error taxonomy e comportamento fail-safe.
 
 **Mini-progetti / esercizi**
 
@@ -350,6 +376,9 @@ Regole:
 - API versioning
 - Health checks
 - System architecture basics
+- Schema JSON input/output
+- Error response standard
+- Modello AI/ML trattato come componente interno dietro contratti chiari
 
 **Badge**
 
@@ -358,7 +387,7 @@ Regole:
 - 🟨 CERT: CERT-SWE - API design e architecture concepts
 - 🔎 RESEARCH: Pydantic validation e API versioning
 
-**Output:** API `/predict` e `/health` con test di integrazione.
+**Output:** API v1 `/predict` e `/health` con validazione input/output, error response standard, healthcheck e test di integrazione.
 
 **Mini-progetti / esercizi**
 
@@ -378,6 +407,8 @@ Regole:
 - Logging e monitoring
 - Healthcheck
 - Metriche operative
+- Runbook minimo
+- Eseguibilità da parte di un'altra persona
 
 **Badge**
 
@@ -386,7 +417,7 @@ Regole:
 - 🟨 CERT: CERT-SWE - Docker, Cloud, Monitoring
 - 🔎 RESEARCH: Docker FastAPI, Cloud Run, Prometheus/Grafana
 
-**Output:** progetto portfolio dockerizzato con logging e metriche.
+**Output:** progetto portfolio dockerizzato con logging, metriche, healthcheck, deploy documentato e runbook minimo.
 
 **Mini-progetti / esercizi**
 
@@ -438,6 +469,7 @@ Regole:
 - 🟩 DATACAMP: non specifico
 - 🟨 CERT: progetto SQL
 - 🔎 RESEARCH: data storytelling for analytics
+- 🛠️ BASWE: Project 8 — Text-to-SQL Interface with Guardrails & Hallucination Detection ([guida](./15-ai-engineering-projects-guide.it.md))
 
 **Output:** report finale con note su dataset e definizione KPI.
 
@@ -491,6 +523,7 @@ Regole:
 - 🟩 DATACAMP: non specifico
 - 🟨 CERT: CERT-SEC - PII detection and redaction
 - 🔎 RESEARCH: Presidio e PII handling
+- 🛠️ BASWE: Project 14 — Multi-Modal Document Processor (OCR + LLM Extraction + Validation) ([guida](./15-ai-engineering-projects-guide.it.md))
 
 **Output:** report con data quality e note privacy, senza PII nel repository.
 
@@ -514,6 +547,8 @@ Regole:
 - Costi, performance e licensing
 - Benchmarking
 - Hugging Face model hub e pipeline di base
+- Scelta modello: grande, piccolo, API esterna, locale o open-weight
+- Trade-off costo, latenza, qualità, licenza e privacy
 
 **Badge**
 
@@ -522,11 +557,11 @@ Regole:
 - 🟨 CERT: CERT-FM - transformer, attention, scaling, post-training
 - 🔎 RESEARCH: Chinchilla, RLHF explained, lm-eval-harness, Hugging Face docs
 
-**Output:** LLM Decision Guide e notebook di benchmark.
+**Output:** LLM Decision Guide e notebook di benchmark con scelta modello motivata.
 
 **Mini-progetti / esercizi**
 
-- _Da aggiornare_: aggiungere qui i mini-progetti completati per Step 15.
+- `Local SLM App (Ollama)` - app LLM completamente offline con Ollama: benchmark di inferenza e confronto di 3 modelli sullo stesso hardware, con report sui trade-off qualità/velocità e note su privacy, latenza e costi. Output: report di benchmark + demo offline.
 
 ---
 
@@ -554,12 +589,13 @@ Regole:
 - 🟩 DATACAMP: Introduzione a Hugging Face come supporto pratico
 - 🟨 CERT: CERT-FT - PEFT, LoRA, distillation, merging
 - 🔎 RESEARCH: Hugging Face PEFT, mergekit, Axolotl
+- 🛠️ BASWE: Project 10 — Fine-Tuning Pipeline with LoRA on a Domain-Specific Dataset ([guida](./15-ai-engineering-projects-guide.it.md))
 
 **Output:** notebook Hugging Face/LoRA su task custom con metriche comparative.
 
 **Mini-progetti / esercizi**
 
-- _Da aggiornare_: aggiungere qui i mini-progetti completati per Step 15.5.
+- `Fine-Tuning LoRA & DPO` - fine-tuning su task specifico (estrazione JSON o tool-calling) con LoRA/QLoRA e preference tuning via DPO. Output: notebook con metriche before/after e numeri reali. Allenato: PEFT, training efficiente, valutazione comparativa.
 
 ---
 
@@ -574,6 +610,9 @@ Regole:
 - Rate limits
 - Retry e idempotency
 - Logging richieste
+- Caching
+- Limiti token
+- Controllo costi e stima costo per richiesta
 
 **Badge**
 
@@ -582,7 +621,7 @@ Regole:
 - 🟨 CERT: consolidamento foundation models hands-on
 - 🔎 RESEARCH: rate limits, retries, idempotency
 
-**Output:** mini app LLM con logging e gestione errori.
+**Output:** mini app LLM con caching, retry/idempotenza, logging richieste, gestione rate limit e stima costo per richiesta.
 
 **Mini-progetti / esercizi**
 
@@ -602,6 +641,7 @@ Regole:
 - Prompt tracking
 - A/B testing
 - Failure cases
+- Regola anti prompt tweaking infinito: dopo 2-3 iterazioni senza miglioramento si controllano retrieval, dati, codice, modello, contesto, validazione output e architettura
 
 **Badge**
 
@@ -609,8 +649,9 @@ Regole:
 - 🟩 DATACAMP: Prompt Engineering
 - 🟨 CERT: CERT-PE + CERT-SEC
 - 🔎 RESEARCH: promptfoo, Langfuse, injection patterns
+- 🛠️ BASWE: Project 9 — Prompt Versioning and A/B Testing Platform ([guida](./15-ai-engineering-projects-guide.it.md))
 
-**Output:** prompt catalog con report A/B e test di sicurezza.
+**Output:** prompt catalog con report A/B, test di sicurezza e failure analysis oltre il prompt.
 
 **Mini-progetti / esercizi**
 
@@ -655,6 +696,8 @@ Regole:
 - BM25 vs dense retrieval
 - Hybrid search
 - Recall@k e MRR
+- Baseline keyword/BM25 prima di vector DB
+- Confronto tra ricerca lessicale, semantica e ibrida
 
 **Badge**
 
@@ -662,12 +705,13 @@ Regole:
 - 🟩 DATACAMP: Embeddings con OpenAI API
 - 🟨 CERT: CERT-RAG + CERT-EVAL
 - 🔎 RESEARCH: reciprocal rank fusion e embedding evaluation
+- 🛠️ BASWE: Project 6 — RAG Pipeline with Hybrid Search Over Internal Docs (fase base) ([guida](./15-ai-engineering-projects-guide.it.md))
 
-**Output:** retriever v1 con metriche base e confronto dense/hybrid.
+**Output:** retriever v1 con metriche base e confronto BM25 vs semantic search vs hybrid search.
 
 **Mini-progetti / esercizi**
 
-- _Da aggiornare_: aggiungere qui i mini-progetti completati per Step 19.
+- `Hybrid Retrieval (BM25 + vector)` - retriever ibrido che combina BM25 e ricerca vettoriale, valutato con recall@k e MRR. Base del progetto Production RAG dello Step 20. Output: retriever v1 + report metriche.
 
 ---
 
@@ -683,6 +727,10 @@ Regole:
 - Query expansion
 - Context construction
 - Evaluation set minimo
+- Decisione esplicita: vector DB solo se serve
+- Citation enforcement
+- Failure analysis
+- Regression test
 
 **Badge**
 
@@ -690,12 +738,19 @@ Regole:
 - 🟩 DATACAMP: Embeddings, Pinecone e LangChain RAG
 - 🟨 CERT: CERT-RAG + CERT-APP
 - 🔎 RESEARCH: chunking, reranking, HyDE
+- 🛠️ BASWE: Project 6 — RAG Pipeline with Hybrid Search (versione production, Portfolio #3) · Project 4 — Self-Healing Technical Documentation ([guida](./15-ai-engineering-projects-guide.it.md))
 
-**Output:** portfolio RAG skeleton con A/B test su strategie di chunking.
+**Decision matrix retrieval**
+
+- BM25 basta quando il dominio è piccolo, lessicale, controllato o con keyword precise.
+- Vector DB serve quando servono similarità semantica, sinonimi, concetti impliciti o documenti lunghi.
+- Hybrid search serve quando serve più robustezza.
+
+**Output:** portfolio RAG skeleton con baseline BM25, scelta vector/hybrid motivata, A/B test chunking, reranking, citation enforcement, eval set e regression test.
 
 **Mini-progetti / esercizi**
 
-- _Da aggiornare_: aggiungere qui i mini-progetti completati per Step 20.
+- `Production RAG ("Ask My Docs")` - sistema RAG domain-specific con retrieval ibrido (BM25 + vettoriale), reranking con cross-encoder, citation enforcement e pipeline di valutazione gated in CI. Output: Portfolio #3 production-ready. Allenato: retrieval, reranking, eval automatica.
 
 ---
 
@@ -712,6 +767,8 @@ Regole:
 - ReAct e planning
 - Guardrails
 - Agent evaluation
+- Criteri per scegliere chain semplice, routing, tool calling o agent
+- Permission guardrails e output validation
 
 **Badge**
 
@@ -719,12 +776,14 @@ Regole:
 - 🟩 DATACAMP: LangChain + concetti LLMOps su chain e agenti
 - 🟨 CERT: CERT-AGT
 - 🔎 RESEARCH: LangGraph, tool error handling, agent benchmarks
+- 🎓 GH600: fondamenta concettuali dei domini D1-D4 dell'esame GH-600 (versione GitHub-specifica negli Step 25-28)
+- 🛠️ BASWE: Project 5 — LLM Output Arbitration System · Project 15 — Agent Orchestration System (Tool Use, Memory, HITL) ([guida](./15-ai-engineering-projects-guide.it.md))
 
-**Output:** agent con due tool, memoria, guardrail e metriche di valutazione.
+**Output:** agent con due tool, memoria, guardrail, gestione tool failure, output validation e task success rate.
 
 **Mini-progetti / esercizi**
 
-- _Da aggiornare_: aggiungere qui i mini-progetti completati per Step 21.
+- `Real-Time Multimodal Assistant` - voice assistant o pipeline in streaming con budget di latenza end-to-end dettagliato, graceful degradation e gestione dei timeout. Output: demo real-time + scomposizione del latency budget. Allenato: sistemi real-time, robustezza.
 
 ---
 
@@ -737,12 +796,18 @@ Regole:
 - Architetture applicative LLM
 - Function calling
 - Model routing
-- Caching
+- Fallback strategy
+- Semantic caching e prompt caching
 - Orchestrazione asincrona
 - Quantization
 - Batching
 - KV cache
+- Tracing
+- Failure analysis
+- Cost monitoring
+- Latenza p50/p95
 - Automated evaluation
+- Evaluation regression in CI
 - LLM-as-judge
 - Hallucination, toxicity e bias testing
 - Prompt injection mitigation
@@ -750,6 +815,7 @@ Regole:
 - Secure sandboxing
 - GDPR, AI Act e AI ethics
 - Feedback loops e human-in-the-loop
+- Incident/runbook
 
 **Badge**
 
@@ -757,12 +823,14 @@ Regole:
 - 🟩 DATACAMP: LLMOps + sviluppo applicazioni AI con OpenAI API
 - 🟨 CERT: CERT-INF, CERT-APP, CERT-EVAL, CERT-SEC, CERT-FB
 - 🔎 RESEARCH: vLLM, secrets management, monitoring, EU AI Act
+- 🎓 GH600: fondamenta dei domini D4 (evaluation/tuning) e D6 (guardrails/accountability) dell'esame GH-600
+- 🛠️ BASWE (hub produzione/LLMOps): Project 1 — Model Regression Detection · Project 2 — LLM Cost Autopilot · Project 3 — Failure Forensics · Project 7 — Semantic Caching · Project 11 — LLM Gateway · Project 12 — AI Feature Flags · Project 13 — Eval Dataset Generator ([guida](./15-ai-engineering-projects-guide.it.md))
 
-**Output:** production readiness kit con runbook, dashboard, security checklist, eval plan e inference report.
+**Output:** production readiness kit collegato ai progetti portfolio, con runbook, dashboard, security checklist, eval plan, tracing, p50/p95, cost monitoring e regression gate.
 
 **Mini-progetti / esercizi**
 
-- _Da aggiornare_: aggiungere qui i mini-progetti completati per Step 22.
+- `Monitoring & Observability` - tracing, latenza p50/p95, costo per richiesta e metriche di qualità applicati al sistema RAG, con regression gating in CI. Output: dashboard di osservabilità + gate CI. Allenato: LLMOps, monitoring di produzione.
 
 ---
 
@@ -779,6 +847,7 @@ Regole:
 - Data engineering per AI
 - System design AI/LLM
 - Trade-off e comunicazione tecnica
+- Domande system design AI: RAG production-ready, BM25 vs vector DB, riduzione latenza/costi, monitoraggio hallucination/qualità, tool calling failure e scelta modello
 
 **Badge**
 
@@ -787,7 +856,7 @@ Regole:
 - 🟨 CERT: consolidamento finale delle competenze AI Engineering
 - 🔎 RESEARCH: ML interview, LLM system design, RAG evaluation interview
 
-**Output:** flashcard, gap list, mock interview e risposte system design.
+**Output:** flashcard, gap list, mock interview e risposte system design AI.
 
 **Mini-progetti / esercizi**
 
@@ -823,16 +892,127 @@ Regole:
 
 ---
 
+## 🎓 Track Certificazione — GitHub Certified: Agentic AI Developer (GH-600)
+
+Dopo il percorso core, la roadmap punta a una certificazione verticale sull'**agentic AI dentro il ciclo di sviluppo**, con GitHub come control plane.
+
+**Certificazione:** GitHub Certified: Agentic AI Developer (beta) — Esame **GH-600** "Developing in Agentic AI Systems" (erogato da Microsoft, mantenuto da GitHub). 120 minuti, proctored, passing score 700.
+
+**Stack:** GitHub Copilot, MCP servers, GitHub Actions/CI, custom agents, custom instructions, multi-agent orchestration. Le fondamenta agentiche arrivano dagli Step 21-22; qui diventano GitHub-specifiche.
+
+**Risorse:** moduli gratuiti su Microsoft Learn (*Foundations of Agentic AI in GitHub*, *Designing Agent Architecture and SDLC Integration*, *Tooling, MCP, and Agent Execution Environments*) + documentazione GitHub Copilot.
+
+---
+
+## 🕒 Step 25 - Agent Architecture & SDLC su GitHub
+
+**Focus:** progettare agenti dentro il ciclo SDLC con GitHub come system of record, separando planning da execution. *(Dominio esame D1, 15-20%)*
+
+**Competenze**
+
+- Integrazione agenti nel SDLC: step, anti-pattern, input/output/success criteria
+- Boundaries planning/reasoning/action: structured plan, validazione, nessuna azione prima dell'approvazione
+- Observability e control: degree of autonomy, guardrails, artefatti ispezionabili, human intervention
+
+**Badge**
+
+- 🟨 CERT: CERT-GH600 - D1
+- 🎓 GH600: MS Learn *Foundations of Agentic AI in GitHub* + *Designing Agent Architecture and SDLC Integration*
+- 🔎 RESEARCH: docs GitHub Copilot su custom agents e structured plan
+
+**Output:** agente con structured-plan e validation gate, con artefatti ispezionabili in repo.
+
+---
+
+## 🕒 Step 26 - Tool Use, MCP & Execution Environment
+
+**Focus:** dare all'agente tool, MCP server e un ambiente GitHub sicuro (repo/branch scope, CI, PR autonome). *(Dominio esame D2, 20-25%)*
+
+**Competenze**
+
+- Selezione e configurazione tool, tool permissions
+- MCP servers: tool, remote MCP server GitHub, registries, allow lists
+- Agenti nell'ambiente: execution context, repo/branch scope, invocazione in CI workflow, branch e PR autonome
+- Esecuzione sicura: error handling, retries, rollbacks, escalation, traceability
+
+**Badge**
+
+- 🟨 CERT: CERT-GH600 - D2
+- 🎓 GH600: MS Learn *Tooling, MCP, and Agent Execution Environments*
+- 🔎 RESEARCH: docs GitHub su MCP server, allow list e CI agents
+- 🛠️ BASWE: Project 4 — Self-Healing Technical Documentation (GitHub Action in CI, PR autonome) ([guida](./15-ai-engineering-projects-guide.it.md))
+
+**Output:** MCP server + allow list collegati a un agente invocato in CI che apre una PR su branch scoped, con rollback ed escalation.
+
+---
+
+## 🕒 Step 27 - Memory/State + Evaluation & Tuning
+
+**Focus:** gestire memoria/stato durevoli e chiudere il loop di valutazione, analisi errori e tuning. *(Domini esame D3 10-15% + D4 15-20%)*
+
+**Competenze**
+
+- Memory strategies: short/long/external, scoping, expiration/pruning/reset
+- State e context drift: durable artifacts, resume senza ripetere, drift detection
+- Success criteria e eval signals, automated scanning tools
+- Failure analysis da logs/traces e classificazione root cause
+- Tuning di instructions, memory e tool access
+
+**Badge**
+
+- 🟨 CERT: CERT-GH600 - D3 + D4
+- 🎓 GH600: docs GitHub Copilot su memory e implementation planner
+- 🔎 RESEARCH: code scanning e root cause analysis per agenti
+
+**Output:** agente con stato persistente, drift detection e report di failure analysis che guida un tuning concreto.
+
+---
+
+## 🕒 Step 28 - Multi-Agent Orchestration + Guardrails & Esame GH-600
+
+**Focus:** coordinare più agenti in sicurezza, definire autonomy levels e guardrail, poi sostenere l'esame. *(Domini esame D5 15-20% + D6 10-15%)*
+
+**Competenze**
+
+- Orchestration pattern, isolation parallela, conflict resolution su code changes
+- Observability multi-agent, audit e analisi post-hoc
+- Failure multi-agent e recovery (rollback + human-in-the-loop)
+- Lifecycle agenti: add/update/replace/retire
+- Autonomy levels per rischio, guardrails HITL, least-privilege, authorization per cambi irreversibili
+
+**Badge**
+
+- 🟨 CERT: CERT-GH600 - D5 + D6
+- 🎓 GH600: docs GitHub Copilot su cloud agent guardrails e risks/mitigations
+- 🔎 RESEARCH: multi-agent orchestration e autonomy levels
+- 🛠️ BASWE: Project 15 — Agent Orchestration System with Tool Use, Memory, and Human-in-the-Loop ([guida](./15-ai-engineering-projects-guide.it.md))
+
+**Output:** workflow multi-agent con conflict resolution, autonomy levels e guardrail documentati + superamento dell'esame GH-600.
+
+---
+
 ## Portfolio Target
 
 | Portfolio | Output | Area |
 | --------- | ------ | ---- |
 | #1 | ML text classification project | Machine Learning |
 | #2 | Dockerized ML API | ML Engineering |
-| #3 | RAG system with retrieval evaluation | LLM/RAG |
-| #4 | Agent with tools, memory and guardrails | Agentic AI |
-| #5 | Production readiness kit | LLMOps |
+| #3 | Production RAG "Ask My Docs" (hybrid retrieval, reranking, citation enforcement, eval CI-gated) | LLM/RAG |
+| #4 | Agent with tools, memory and guardrails + Real-Time Multimodal App | Agentic AI |
+| #5 | Production readiness kit + Monitoring & Observability | LLMOps |
 | #6 | Optional web demo / portfolio UI | Full-stack demo |
+
+## Portfolio Production-Ready (5 progetti)
+
+Non costruisco demo AI. Costruisco sistemi AI affidabili, misurabili e mantenibili.
+
+| # | Progetto | Step | Decisioni ingegneristiche dimostrate |
+| - | -------- | ---- | ------------------------------------ |
+| 1 | Production RAG ("Ask My Docs") | Step 19-20 | BM25 vs vector DB vs hybrid, chunking, reranking, eval, citation enforcement |
+| 2 | Local SLM App (Ollama) | Step 15 | scelta modello piccolo, latenza, privacy, benchmark, costo zero API |
+| 3 | Monitoring & Observability | Step 22 | tracing, costi, p50/p95, regression gating, failure analysis |
+| 4 | Fine-Tuning LoRA & DPO | Step 15.5 | quando fine-tuning serve davvero rispetto a RAG o prompting, metriche before/after |
+| 5 | Real-Time Multimodal App | Step 21 | timeout, fallback, graceful degradation, latency budget |
 
 ## Skills Coverage
 
@@ -852,6 +1032,7 @@ Regole:
 | Security & Privacy | PII, prompt injection, GDPR, AI ethics |
 | Interview Readiness | ML/LLM/system design communication |
 | Portfolio UI | Optional MERN/Vercel demo layer |
+| GitHub Agentic AI Certification | GH-600: SDLC agents, MCP, multi-agent orchestration, guardrails |
 
 ## LinkedIn Summary
 
@@ -859,5 +1040,28 @@ Sto costruendo una roadmap personale da AI Engineer basata su progetti, non solo
 
 Il percorso copre software engineering, machine learning, dataset engineering, LLM, Hugging Face, fine-tuning, prompt engineering, RAG, agenti AI, LLMOps, sicurezza e preparazione ai colloqui tecnici.
 
+Come obiettivo finale punto alla certificazione GitHub Certified: Agentic AI Developer (esame GH-600), portando le competenze sugli agenti dentro il ciclo di sviluppo con GitHub come control plane: SDLC agentico, MCP, orchestrazione multi-agente e guardrail.
+
 Repository pubblico:
 https://github.com/AlessandroSfratta/ai-engineer-roadmap
+
+## 🧠 Decision Log da compilare per ogni progetto
+
+```markdown
+# Decision Log — <nome progetto>
+
+- Qual è il problema reale?
+- Qual è la baseline più semplice?
+- Perché non basta una soluzione più semplice?
+- Serve davvero un LLM?
+- Serve davvero un vector database?
+- BM25 sarebbe sufficiente?
+- Serve RAG, fine-tuning o solo prompting?
+- Quale modello uso e perché?
+- Quali metriche misuro?
+- Quali failure case conosco?
+- Come gestisco errori, timeout e retry?
+- Come controllo costi e latenza?
+- Come faccio debug quando qualcosa va male?
+- Come capisco se il sistema è migliorato o peggiorato?
+```

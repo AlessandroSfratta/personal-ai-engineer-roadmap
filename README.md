@@ -1,10 +1,10 @@
 # AI Engineer Roadmap
 
-Questa repository raccoglie la versione pubblica della mia roadmap da AI Engineer / AI Developer.
+Questa repository raccoglie la versione pubblica della mia roadmap per diventare AI Engineer.
 
-L'ho creata per trasformare lo studio in un percorso leggibile, misurabile e orientato a progetti. L'obiettivo non e solo seguire corsi, ma costruire progressivamente competenze verificabili: codice, notebook, API, sistemi RAG, agenti AI, checklist di produzione e progetti da portfolio.
+L’ho creata per trasformare lo studio in un percorso leggibile, misurabile e orientato ai progetti.
+L’obiettivo non è semplicemente seguire corsi, ma costruire progressivamente competenze verificabili e orientate alla produzione, mostrando direzione, metodo e aree di crescita.
 
-La roadmap e pensata anche per essere condivisa su LinkedIn e nel portfolio: mostra direzione, metodo e aree di crescita senza includere note personali, scadenze operative private o materiali non pubblici.
 
 ## Cosa contiene
 
