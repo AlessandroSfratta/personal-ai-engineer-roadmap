@@ -23,7 +23,7 @@ Un AI Engineer professionale sa quando una baseline semplice basta, quando serve
 - non si introduce un framework solo per moda
 - ogni scelta tecnica risponde alla domanda: "serve davvero?"
 
-Ultimo aggiornamento: 21/06/2026
+Ultimo aggiornamento: 24/06/2026
 
 ## Come leggere la roadmap
 
