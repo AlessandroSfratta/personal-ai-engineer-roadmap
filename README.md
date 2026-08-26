@@ -14,9 +14,11 @@ Il file principale e:
 
 La roadmap include:
 
-- una sequenza di step da software engineering a produzione AI
+- una sequenza di step dai fondamenti di Computer Science e software engineering alla produzione AI
+- una traccia King Programming per strutture dati, algoritmi, sistemi, architettura, performance e capacità ingegneristiche avanzate
 - competenze tecniche per ogni fase
 - collegamenti a percorsi Master e DataCamp
+- un checkpoint Summer AI Cup con i corsi intermedi di Machine Learning e Agentic AI
 - output pratici attesi per ogni step
 - spazio per mini-progetti ed esercizi completati
 - obiettivi portfolio finali

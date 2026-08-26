@@ -23,7 +23,7 @@ Un AI Engineer professionale sa quando una baseline semplice basta, quando serve
 - non si introduce un framework solo per moda
 - ogni scelta tecnica risponde alla domanda: "serve davvero?"
 
-Ultimo aggiornamento: 18/07/2026
+Ultimo aggiornamento: 17/08/2026
 
 ## Come leggere la roadmap
 
@@ -37,8 +37,10 @@ Legenda badge:
 
 - 🟦 **MASTER**: moduli o progetti del percorso formativo principale
 - 🟩 **DATACAMP**: corsi o capitoli di supporto pratico
+- 🏆 **SUMMER AI CUP**: corsi intermedi separati dal Master, pianificati dopo gli Step 4 e 5
 - 🟨 **CERT**: competenze mappate alla checklist AI Engineering
 - 🔎 **RESEARCH**: studio autonomo da documentazione, paper, articoli o tutorial tecnici
+- 👑 **KING PROGRAMMING**: fondamenti di Computer Science, algoritmi e Software Engineering integrati come core, approfondimento avanzato o specializzazione post-core; non è una certificazione e non riapre automaticamente gli step completati
 - 🆕 **SKILLS**: competenze professionali aggiunte alla roadmap
 - 🎓 **GH600**: risorsa per la certificazione GitHub Certified: Agentic AI Developer (esame GH-600), Step 25-28
 - 🛠️ **BASWE**: progetto portfolio di riferimento dalla guida (italiana, da usare come riferimento) [`15-ai-engineering-projects-guide.it.md`](./15-ai-engineering-projects-guide.it.md) ("15 AI Engineering Projects That Actually Land Jobs") — originale inglese in [`15-ai-engineering-projects-guide.md`](./15-ai-engineering-projects-guide.md). Non è uno step da completare: è un blueprint collegato allo step. Mappa completa progetti→step in cima alla guida.
@@ -62,7 +64,9 @@ Il percorso non è solo teorico. Ogni fase deve produrre almeno uno tra:
 | ----- | ---- | ---- |
 | ✅ | Software Engineering foundations | Step 1-3 |
 | ⏳ | Testing e manutenibilità | Step 4 |
-| 🕒 | Reliability, ML, LLM, RAG, Agentic AI, LLMOps | Step 5-23 |
+| 🕒 | Reliability Engineering | Step 5 |
+| 🕒 | Summer AI Cup: Fondamenti ML + Agentic AI Foundations | checkpoint dopo Step 5 |
+| 🕒 | ML, LLM, RAG, Agentic AI, LLMOps | Step 6-23 |
 | 🕒 | Portfolio UI opzionale | Step 24 |
 | 🕒 | Certificazione GitHub Agentic AI Developer (GH-600) | Step 25-28 |
 
@@ -98,6 +102,43 @@ DataCamp viene usato come pratica guidata a supporto degli step, senza sostituir
 | Database vettoriali per Embeddings con Pinecone | Step 20 | Pianificato |
 | Ingegneria del Software per Data Science in Python | Step 2-4 | Completato, da rivedere |
 | Sviluppare applicazioni LLM con LangChain | Step 20-21 | Pianificato |
+
+## Summer AI Cup - Corsi intermedi
+
+La Summer AI Cup è un percorso separato dal Master. I due corsi sono già inseriti nella roadmap e verranno svolti, in questo ordine, dopo aver completato gli Step 4 e 5:
+
+- 🕒 **Fondamenti del Machine Learning** - 0%, 0/6 moduli
+- 🕒 **Agentic AI Foundations** - 0%, 0/4 moduli
+
+**Cosa abbiamo appreso dalla Summer AI Cup**
+
+- analisi dei dataset e gestione dei dati mancanti
+- preprocessing, encoding e scaling delle feature
+- regressione, classificazione, metriche e cross-validation
+- overfitting, regolarizzazione, bias-varianza e clustering
+- differenza tra LLM, workflow e agente AI
+- agentic loop, planning, memoria e output strutturato
+- tool calling con LiteLLM, JSON Schema e Pydantic
+- pattern ReAct, Plan & Execute e Reflexion
+- LangChain, LangGraph, checkpoint e human-in-the-loop
+
+## Percorso King Programming Integrato
+
+La roadmap integra anche una traccia progressiva di Computer Science e Software Engineering. I contenuti fondamentali entrano negli step operativi; gli argomenti algoritmici e sistemistici più avanzati restano approfondimenti post-core, senza trasformare il percorso AI in una lista di nozioni da memorizzare.
+
+| Area | Step principali | Integrazione |
+| --- | --- | --- |
+| Fondamenti di programmazione e strumenti | Step 1-5 | linguaggio, Git, Clean Code, debugging, testing, refactoring e reliability |
+| Strutture dati e algoritmi | Step 2, 6, 23 | Big-O, strutture dati, sorting/searching, ricorsione, grafi, paradigmi algoritmici e ripasso avanzato |
+| Matematica e numerica | Step 6 | logica, combinatoria, probabilità, ricorrenze, floating point, errore numerico e randomizzazione |
+| Sistemi, rete e runtime | Step 5, 9-10 | processi/thread, memoria, HTTP/TLS, socket, container, virtualizzazione e deployment |
+| Database e sistemi distribuiti | Step 11-13, 22 | indici, transazioni, query planner, NoSQL, replication, sharding, consistenza e fault tolerance |
+| Architettura, performance e sicurezza | Step 9-10, 14, 17, 22 | pattern architetturali, profiling, concorrenza, threat modelling, least privilege e osservabilità |
+| Engineering e capacità senior | Step 4, 9, 22-23 | code review, lettura codebase/RFC/paper, invarianti, failure mode, API/system design e trade-off |
+| Product thinking e HCI | Step 24 | problem framing, modellazione, usability, feedback, accessibility e interaction design |
+| Programmazione moderna con LLM | Step 4, 17, 21, 25-28 | specifica, decomposizione, architettura, verifica del codice generato, sicurezza ed edge case |
+
+Gli approfondimenti specialistici — TAOCP avanzato, BDD/ZDD, generazione combinatoria, Exact Cover/DLX, SAT/CSP, compiler e compressione — sono tracciati come sviluppo post-core collegato agli Step 2, 6 e 23.
 
 ## Aggiornamento Mini-Progetti
 
@@ -135,6 +176,7 @@ Regole:
 - 🟩 DATACAMP: non applicabile
 - 🟨 CERT: CERT-SWE - Git, Linux, numerical precision
 - 🔎 RESEARCH: poetry/venv, pre-commit, git flow, bash scripting
+- 👑 KING PROGRAMMING: Git avanzato, padronanza degli strumenti e basi del rapporto software-sistema
 
 **Output:** repository base con setup, README e workflow riproducibile.
 
@@ -161,6 +203,7 @@ Regole:
 - 🟩 DATACAMP: Software Engineering per Data Science in Python - completato, da rivedere
 - 🟨 CERT: CERT-SWE - Python programming, data structures, algorithms
 - 🔎 RESEARCH: best practice di struttura progetto e DSA per ML engineer
+- 👑 KING PROGRAMMING: linguaggio e standard library; array/list/stack/queue/hash/tree/heap/trie/graph; Big-O; ricerca, sorting, ricorsione e paradigmi algoritmici fondamentali
 
 **Output:** mini CLI tool con gestione input e logging base.
 
@@ -187,6 +230,7 @@ Regole:
 - 🟩 DATACAMP: Software Engineering per Data Science in Python - completato, da rivedere
 - 🟨 CERT: CERT-SWE - OOP, typing, moduli
 - 🔎 RESEARCH: mypy e typing quickstart
+- 👑 KING PROGRAMMING: Clean Code, Pragmatic Programmer, SICP, paradigmi di programmazione, modularità e design pattern applicati con criterio
 
 **Output:** package installabile con struttura pulita.
 
@@ -216,6 +260,7 @@ Regole:
 - 🟩 DATACAMP: Software Engineering per Data Science in Python - completato, da rivedere
 - 🟨 CERT: CERT-SWE - Testing, coverage, CI/CD
 - 🔎 RESEARCH: GitHub Actions e cache pytest
+- 👑 KING PROGRAMMING: debugging sistematico, unit/integration/E2E/regression/property-based test, mocking, refactoring e review del codice generato dall'AI
 
 **Output:** pipeline CI verde con coverage minimo, test riproducibili e base riusabile per i progetti successivi.
 
@@ -245,6 +290,7 @@ Regole:
 - 🟩 DATACAMP: manutenibilita + reliability per applicazioni AI
 - 🟨 CERT: consolidamento software engineering
 - 🔎 RESEARCH: timeouts, retries e fail-safe design
+- 👑 KING PROGRAMMING: processi, thread, async/event loop, sincronizzazione, race condition, deadlock, IPC e ragionamento sui failure mode
 
 **Output:** libreria con logging strutturato, retry/backoff, timeout, error taxonomy e comportamento fail-safe.
 
@@ -273,6 +319,7 @@ Regole:
 - 🟩 DATACAMP: Hugging Face Datasets e ideazione LLMOps come supporto
 - 🟨 CERT: CERT-SWE math foundations + CERT-ML
 - 🔎 RESEARCH: leakage examples, 3Blue1Brown, StatQuest
+- 👑 KING PROGRAMMING: logica e matematica discreta, combinatoria, ricorrenze, complessità, numerica/floating point, probabilità, PRNG e Monte Carlo
 
 **Output:** notebook baseline con metriche, seed fisso e mini cheat sheet matematica.
 
@@ -386,6 +433,7 @@ Regole:
 - 🟩 DATACAMP: sviluppo applicazioni AI con OpenAI API come supporto ai contratti applicativi
 - 🟨 CERT: CERT-SWE - API design e architecture concepts
 - 🔎 RESEARCH: Pydantic validation e API versioning
+- 👑 KING PROGRAMMING: IP/TCP/UDP, DNS, HTTP(S), TLS, socket, client-server/RPC, autenticazione/autorizzazione e architetture modulari
 
 **Output:** API v1 `/predict` e `/health` con validazione input/output, error response standard, healthcheck e test di integrazione.
 
@@ -416,6 +464,7 @@ Regole:
 - 🟩 DATACAMP: LLMOps e best practice per applicazioni AI in produzione
 - 🟨 CERT: CERT-SWE - Docker, Cloud, Monitoring
 - 🔎 RESEARCH: Docker FastAPI, Cloud Run, Prometheus/Grafana
+- 👑 KING PROGRAMMING: sistemi operativi applicati, filesystem/memoria, container e virtualizzazione, proxy/load balancing, benchmark e profiling iniziale
 
 **Output:** progetto portfolio dockerizzato con logging, metriche, healthcheck, deploy documentato e runbook minimo.
 
@@ -443,6 +492,7 @@ Regole:
 - 🟩 DATACAMP: applicazioni AI con OpenAI API come supporto su dati testuali sensibili
 - 🟨 CERT: pratica data engineering
 - 🔎 RESEARCH: SQL optimization basics
+- 👑 KING PROGRAMMING: modello relazionale, chiavi e vincoli, indici/B-tree, transazioni ACID, isolation, query planner, WAL e recovery
 
 **Output:** report SQL con query documentate e riproducibili.
 
@@ -496,6 +546,7 @@ Regole:
 - 🟩 DATACAMP: non specifico
 - 🟨 CERT: pratica NoSQL e data processing
 - 🔎 RESEARCH: schema validation patterns
+- 👑 KING PROGRAMMING: document/key-value/graph database, storage esterno, log e snapshot, replication, sharding, consistenza e fault tolerance di base
 
 **Output:** pipeline ETL con controlli di qualità.
 
@@ -523,6 +574,7 @@ Regole:
 - 🟩 DATACAMP: non specifico
 - 🟨 CERT: CERT-SEC - PII detection and redaction
 - 🔎 RESEARCH: Presidio e PII handling
+- 👑 KING PROGRAMMING: input validation, threat modelling, data protection e principio del privilegio minimo applicati ai dati sensibili
 - 🛠️ BASWE: Project 14 — Multi-Modal Document Processor (OCR + LLM Extraction + Validation) ([guida](./15-ai-engineering-projects-guide.it.md))
 
 **Output:** report con data quality e note privacy, senza PII nel repository.
@@ -649,6 +701,7 @@ Regole:
 - 🟩 DATACAMP: Prompt Engineering
 - 🟨 CERT: CERT-PE + CERT-SEC
 - 🔎 RESEARCH: promptfoo, Langfuse, injection patterns
+- 👑 KING PROGRAMMING: specifica del problema, vincoli, verifica delle assunzioni, review dell'AI e controllo di sicurezza, performance ed edge case
 - 🛠️ BASWE: Project 9 — Prompt Versioning and A/B Testing Platform ([guida](./15-ai-engineering-projects-guide.it.md))
 
 **Output:** prompt catalog con report A/B, test di sicurezza e failure analysis oltre il prompt.
@@ -705,6 +758,7 @@ Regole:
 - 🟩 DATACAMP: Embeddings con OpenAI API
 - 🟨 CERT: CERT-RAG + CERT-EVAL
 - 🔎 RESEARCH: reciprocal rank fusion e embedding evaluation
+- 👑 KING PROGRAMMING: ricerca lineare/binaria, hashing, alberi/trie, ranking e confronto tra strutture di indicizzazione applicati al retrieval
 - 🛠️ BASWE: Project 6 — RAG Pipeline with Hybrid Search Over Internal Docs (fase base) ([guida](./15-ai-engineering-projects-guide.it.md))
 
 **Output:** retriever v1 con metriche base e confronto BM25 vs semantic search vs hybrid search.
@@ -738,6 +792,7 @@ Regole:
 - 🟩 DATACAMP: Embeddings, Pinecone e LangChain RAG
 - 🟨 CERT: CERT-RAG + CERT-APP
 - 🔎 RESEARCH: chunking, reranking, HyDE
+- 👑 KING PROGRAMMING: costo delle strutture di ricerca, indici su memoria/storage, caching e trade-off spazio-tempo nella pipeline RAG
 - 🛠️ BASWE: Project 6 — RAG Pipeline with Hybrid Search (versione production, Portfolio #3) · Project 4 — Self-Healing Technical Documentation ([guida](./15-ai-engineering-projects-guide.it.md))
 
 **Decision matrix retrieval**
@@ -776,6 +831,7 @@ Regole:
 - 🟩 DATACAMP: LangChain + concetti LLMOps su chain e agenti
 - 🟨 CERT: CERT-AGT
 - 🔎 RESEARCH: LangGraph, tool error handling, agent benchmarks
+- 👑 KING PROGRAMMING: decomposizione, ricerca/backtracking, stato, concorrenza, message passing e streaming come basi per workflow agentici controllabili
 - 🎓 GH600: fondamenta concettuali dei domini D1-D4 dell'esame GH-600 (versione GitHub-specifica negli Step 25-28)
 - 🛠️ BASWE: Project 5 — LLM Output Arbitration System · Project 15 — Agent Orchestration System (Tool Use, Memory, HITL) ([guida](./15-ai-engineering-projects-guide.it.md))
 
@@ -823,6 +879,7 @@ Regole:
 - 🟩 DATACAMP: LLMOps + sviluppo applicazioni AI con OpenAI API
 - 🟨 CERT: CERT-INF, CERT-APP, CERT-EVAL, CERT-SEC, CERT-FB
 - 🔎 RESEARCH: vLLM, secrets management, monitoring, EU AI Act
+- 👑 KING PROGRAMMING: sistemi distribuiti, code/eventi, consistenza e fault tolerance, performance engineering, caching, concorrenza, sicurezza e trade-off architetturali
 - 🎓 GH600: fondamenta dei domini D4 (evaluation/tuning) e D6 (guardrails/accountability) dell'esame GH-600
 - 🛠️ BASWE (hub produzione/LLMOps): Project 1 — Model Regression Detection · Project 2 — LLM Cost Autopilot · Project 3 — Failure Forensics · Project 7 — Semantic Caching · Project 11 — LLM Gateway · Project 12 — AI Feature Flags · Project 13 — Eval Dataset Generator ([guida](./15-ai-engineering-projects-guide.it.md))
 
@@ -855,6 +912,7 @@ Regole:
 - 🟩 DATACAMP: ripasso mirato ML/LLM/API/RAG/LLMOps
 - 🟨 CERT: consolidamento finale delle competenze AI Engineering
 - 🔎 RESEARCH: ML interview, LLM system design, RAG evaluation interview
+- 👑 KING PROGRAMMING: primi 30 algoritmi, traccia DSA avanzata e capacità senior — leggere codebase/RFC/paper, riconoscere invarianti e failure mode, scegliere strutture dati e motivare i trade-off
 
 **Output:** flashcard, gap list, mock interview e risposte system design AI.
 
@@ -883,6 +941,7 @@ Regole:
 - 🟩 DATACAMP: non prioritario
 - 🟨 CERT: supporto portfolio/demo, non core AI Engineering
 - 🔎 RESEARCH: Vercel deploy, ML demo UI, portfolio project UX
+- 👑 KING PROGRAMMING: product framing, data model e interaction design, usability, feedback, cognitive load e accessibility
 
 **Output:** UI portfolio/demo per esporre progetti AI, con README e link deploy.
 
@@ -919,6 +978,7 @@ Dopo il percorso core, la roadmap punta a una certificazione verticale sull'**ag
 - 🟨 CERT: CERT-GH600 - D1
 - 🎓 GH600: MS Learn *Foundations of Agentic AI in GitHub* + *Designing Agent Architecture and SDLC Integration*
 - 🔎 RESEARCH: docs GitHub Copilot su custom agents e structured plan
+- 👑 KING PROGRAMMING: specificare il problema, decomporlo, esplicitare vincoli e progettare l'architettura prima della generazione
 
 **Output:** agente con structured-plan e validation gate, con artefatti ispezionabili in repo.
 
@@ -940,6 +1000,7 @@ Dopo il percorso core, la roadmap punta a una certificazione verticale sull'**ag
 - 🟨 CERT: CERT-GH600 - D2
 - 🎓 GH600: MS Learn *Tooling, MCP, and Agent Execution Environments*
 - 🔎 RESEARCH: docs GitHub su MCP server, allow list e CI agents
+- 👑 KING PROGRAMMING: verificare implementazioni e assunzioni, progettare API/tool boundary e controllare sicurezza, performance ed errori
 - 🛠️ BASWE: Project 4 — Self-Healing Technical Documentation (GitHub Action in CI, PR autonome) ([guida](./15-ai-engineering-projects-guide.it.md))
 
 **Output:** MCP server + allow list collegati a un agente invocato in CI che apre una PR su branch scoped, con rollback ed escalation.
@@ -963,6 +1024,7 @@ Dopo il percorso core, la roadmap punta a una certificazione verticale sull'**ag
 - 🟨 CERT: CERT-GH600 - D3 + D4
 - 🎓 GH600: docs GitHub Copilot su memory e implementation planner
 - 🔎 RESEARCH: code scanning e root cause analysis per agenti
+- 👑 KING PROGRAMMING: ragionare su stato, invarianti, control/data flow, complessità e failure durante review e tuning
 
 **Output:** agente con stato persistente, drift detection e report di failure analysis che guida un tuning concreto.
 
@@ -985,6 +1047,7 @@ Dopo il percorso core, la roadmap punta a una certificazione verticale sull'**ag
 - 🟨 CERT: CERT-GH600 - D5 + D6
 - 🎓 GH600: docs GitHub Copilot su cloud agent guardrails e risks/mitigations
 - 🔎 RESEARCH: multi-agent orchestration e autonomy levels
+- 👑 KING PROGRAMMING: modellare concorrenza, dipendenze e conflitti; applicare least privilege, review umana e trade-off espliciti
 - 🛠️ BASWE: Project 15 — Agent Orchestration System with Tool Use, Memory, and Human-in-the-Loop ([guida](./15-ai-engineering-projects-guide.it.md))
 
 **Output:** workflow multi-agent con conflict resolution, autonomy levels e guardrail documentati + superamento dell'esame GH-600.
@@ -1018,6 +1081,7 @@ Non costruisco demo AI. Costruisco sistemi AI affidabili, misurabili e mantenibi
 
 | Area | Coverage |
 | ---- | -------- |
+| Computer Science & Algorithms | DSA core, complessità, matematica discreta, ricerca/ordinamento, grafi e traccia algoritmica avanzata King Programming |
 | Software Engineering | Python, Git, testing, CI/CD, API design, DataCamp percorso 8 completato e da rivedere |
 | Math Foundations | Statistics, linear algebra, calculus |
 | Machine Learning | Baselines, metrics, tuning, error analysis |
@@ -1038,7 +1102,7 @@ Non costruisco demo AI. Costruisco sistemi AI affidabili, misurabili e mantenibi
 
 Sto costruendo una roadmap personale da AI Engineer basata su progetti, non solo su teoria.
 
-Il percorso copre software engineering, machine learning, dataset engineering, LLM, Hugging Face, fine-tuning, prompt engineering, RAG, agenti AI, LLMOps, sicurezza e preparazione ai colloqui tecnici.
+Il percorso copre fondamenti di Computer Science e algoritmi, software engineering, machine learning, dataset engineering, LLM, Hugging Face, fine-tuning, prompt engineering, RAG, agenti AI, LLMOps, sicurezza e preparazione ai colloqui tecnici.
 
 Come obiettivo finale punto alla certificazione GitHub Certified: Agentic AI Developer (esame GH-600), portando le competenze sugli agenti dentro il ciclo di sviluppo con GitHub come control plane: SDLC agentico, MCP, orchestrazione multi-agente e guardrail.
 
@@ -1062,6 +1126,8 @@ https://github.com/AlessandroSfratta/ai-engineer-roadmap
 - Quali failure case conosco?
 - Come gestisco errori, timeout e retry?
 - Come controllo costi e latenza?
+- Quale struttura dati o algoritmo uso e con quale complessità rilevante?
+- Quali invarianti devono restare vere e quali trade-off spazio-tempo accetto?
 - Come faccio debug quando qualcosa va male?
 - Come capisco se il sistema è migliorato o peggiorato?
 ```
